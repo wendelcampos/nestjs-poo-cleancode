@@ -14,7 +14,7 @@ export interface QuestionProps {
     slug: Slug
     attachments: QuestionAttachmentList
     createAt: Date
-    updateAt?: Date
+    updateAt?: Date | null
 }
 
 export class Question extends AggregateRoot<QuestionProps> {
