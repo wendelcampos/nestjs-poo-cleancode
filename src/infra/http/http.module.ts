@@ -15,11 +15,31 @@ import { EditQuestionController } from "./controllers/edit-question.controller";
 import { EditQuestionUseCase } from "@/domain/forum/application/useCases/edit-question";
 import { DeleteQuestionController } from "./controllers/delete-question.controller";
 import { DeleteQuestionUseCase } from "@/domain/forum/application/useCases/delete-question";
+import { AnswerQuestionController } from "./controllers/answer-question.controller";
+import { AnswerQuestionUseCase } from "@/domain/forum/application/useCases/answer-question";
 
 @Module({
     imports: [DatabaseModule, CryptographyModule],
-    controllers: [CreateAccountController, AuthenticateController, CreateQuestionController, FetchRecentQuestionsController, GetQuestionBySlugController, EditQuestionController, DeleteQuestionController],
-    providers: [CreateQuestionUseCase, FetchRecentQuestionsUseCase, RegisterStudentUseCase, AuthenticateStudentUseCase, GetQuestionBySlugUseCase, EditQuestionUseCase, DeleteQuestionUseCase],
+    controllers: [
+        CreateAccountController, 
+        AuthenticateController, 
+        CreateQuestionController, 
+        FetchRecentQuestionsController, 
+        GetQuestionBySlugController, 
+        EditQuestionController, 
+        DeleteQuestionController, 
+        AnswerQuestionController
+    ],
+    providers: [
+        CreateQuestionUseCase, 
+        FetchRecentQuestionsUseCase, 
+        RegisterStudentUseCase, 
+        AuthenticateStudentUseCase, 
+        GetQuestionBySlugUseCase, 
+        EditQuestionUseCase, 
+        DeleteQuestionUseCase, 
+        AnswerQuestionUseCase
+    ],
 })
 
 
