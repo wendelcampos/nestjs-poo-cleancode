@@ -7,6 +7,7 @@ import { UniqueEntityID } from "@/core/entities/unique-entity-id";
 import { AnswerAttachmentsRepository } from "../repositories/answer-attachments-repository";
 import { AnswerAttachmentList } from "../../enterprise/entities/answer-attachment-list";
 import { AnswerNotFoundError } from "../../../../core/errors/errors/answer-not-found-error";
+import { Injectable } from "@nestjs/common";
 
 interface EditAnswerUseCaseRequest {
     authorId: string;
@@ -17,6 +18,7 @@ interface EditAnswerUseCaseRequest {
 
 type EditAnswerUseCaseResponse = Either<AnswerNotFoundError | NotAllowedError, { answer: Answer }>
 
+@Injectable()
 export class EditAnswerUseCase {
 
     constructor( 
@@ -35,7 +37,7 @@ export class EditAnswerUseCase {
             return left(new NotAllowedError())
         }
 
-        const currentAnswerAttachments = await this.answerAttachmentsRepository.findManyAnswerId(answerId)
+        const currentAnswerAttachments = await this.answerAttachmentsRepository.findManyByAnswerId(answerId)
         const answerAttachmentList = new AnswerAttachmentList(currentAnswerAttachments)
     
         const answerAttachments = attachmentsIds.map(attachmentId => {
