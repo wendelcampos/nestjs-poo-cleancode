@@ -25,6 +25,8 @@ import { FetchQuestionAnswersController } from "./controllers/fetch-question-ans
 import { FetchQuestionAnswersUseCase } from "@/domain/forum/application/useCases/fetch-question-answers";
 import { ChooseQuestionBestAnswerController } from "./controllers/choose-question-best-answer.controller";
 import { ChooseQuestionBestAnswerUseCase } from "@/domain/forum/application/useCases/choose-question-best-answer";
+import { CommentOnQuestionController } from "./controllers/comment-on-question.controller";
+import { CommentOnQuestionUseCase } from "@/domain/forum/application/useCases/comment-on-question";
 
 @Module({
     imports: [DatabaseModule, CryptographyModule],
@@ -40,7 +42,8 @@ import { ChooseQuestionBestAnswerUseCase } from "@/domain/forum/application/useC
         EditAnswerController,
         DeleteAnswerController,
         FetchQuestionAnswersController,
-        ChooseQuestionBestAnswerController
+        ChooseQuestionBestAnswerController,
+        CommentOnQuestionController
     ],
     providers: [
         CreateQuestionUseCase, 
@@ -54,7 +57,8 @@ import { ChooseQuestionBestAnswerUseCase } from "@/domain/forum/application/useC
         EditAnswerUseCase,
         DeleteAnswerUseCase,
         FetchQuestionAnswersUseCase,
-        ChooseQuestionBestAnswerUseCase
+        ChooseQuestionBestAnswerUseCase,
+        CommentOnQuestionUseCase
     ],
 })
 
