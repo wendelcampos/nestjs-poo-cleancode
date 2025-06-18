@@ -5,7 +5,7 @@ export class InMemoryAnswerAttachmentRepository implements AnswerAttachmentsRepo
     
     public items: AnswerAttachment[] = [];
 
-    async findManyAnswerId(answerId: string) {
+    async findManyByAnswerId(answerId: string) {
         const answerAttachments = this.items.filter((item) => item.answerId.toString() === answerId)
 
         return answerAttachments;
