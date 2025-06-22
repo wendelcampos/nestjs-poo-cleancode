@@ -31,7 +31,7 @@ export class Answer extends AggregateRoot<AnswerProps> {
         this.touch()
     }
 
-    get attachment() {
+    get attachments() {
         return this.props.attachments
     }
 
