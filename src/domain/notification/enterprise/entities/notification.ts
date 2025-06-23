@@ -7,7 +7,7 @@ export interface NotificationProps {
     title: string;
     content: string;
     createAt: Date;
-    readAt?: Date;
+    readAt?: Date | null;
 }
 
 export class Notification extends Entity<NotificationProps> {

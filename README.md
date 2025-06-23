@@ -35,7 +35,7 @@ Este projeto foi desenvolvido utilizando o framework [NestJS](https://nestjs.com
 - **Desenvolvimento orientado a testes (TDD)**: Funcionalidades são implementadas a partir de testes.
 - **Testes unitários**: Cobrem regras de negócio e casos de uso.
 - **Testes de integração**: Garantem o funcionamento correto entre módulos e com o banco de dados.
-- **Jest e Vitest**: Utilizados para garantir a qualidade e confiabilidade do código.
+- **Vitest**: Utilizado para garantir a qualidade e confiabilidade do código.
 
 ### 5. DTOs e Validação
 
