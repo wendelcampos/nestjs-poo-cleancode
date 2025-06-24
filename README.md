@@ -10,6 +10,9 @@ Este projeto foi desenvolvido utilizando o framework [NestJS](https://nestjs.com
 - **Prisma ORM**: Mapeamento objeto-relacional para acesso ao banco de dados.
 - **Vitest**: Ferramenta moderna de testes utilizada em conjunto para testes rápidos e eficientes.
 - **Zod**: Biblioteca para validação e tipagem de dados de forma declarativa e segura.
+- **Docker Compose**: Orquestração de ambientes de desenvolvimento, facilitando a configuração e execução de múltiplos serviços.
+- **PostgreSQL**: Banco de dados relacional utilizado para persistência dos dados da aplicação.
+- **Redis**: Sistema de cache em memória utilizado para otimizar o desempenho e a escalabilidade.
 
 ## Técnicas e Padrões de Programação
 
@@ -77,6 +80,8 @@ src/
 ├── events/
 ├── infra/
 │   ├── auth/
+│   ├── cache/
+│   │        ├── redis/ 
 │   ├── cryptography/
 │   ├── database/
 │   │   └── prisma/
